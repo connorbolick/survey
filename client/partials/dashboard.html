@@ -1,0 +1,30 @@
+<h1>This is dashboard partial</h1>
+<h2>Current Polls</h2>
+
+
+
+<a href="#/create"><button>Create a New Poll</button></a>
+
+<!-- For the poll id -->
+<!-- <a href="#/poll"><button>to become a poll link</button></a> -->
+
+
+<table>
+	<thead>
+		<tr><th>Name</th> <th>Survey Question</th> <th>Date Posted</th> <th>Action</th></tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="p in polls">
+      <td>{{polls}}</td>
+		<td>{{p.question}}</td>
+		<td><a href="#/poll/{{p._id}}">Poll</a></td>
+		<td>{{date}}</td>
+		<td><a href="#/delete/{{p._id}}">Delete</a></td>
+		</tr>
+	</tbody>
+</table>
+
+<tr ng-repeat="u in users">
+<td>{{u.name}}</td>
+
+</tr>
